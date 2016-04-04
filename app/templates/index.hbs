@@ -1,3 +1,11 @@
+<hr>
 <h3>Welcome to QuestionLand</h3>
 You've got questions, we've got... a place for you to type them.
+<br>
 Maybe you'll get an answer!
+
+<ul>
+  {{#each model as |question|}}
+    <li>{{question.author}} asked: "{{question.content}}"</li>
+  {{/each}}
+</ul>
