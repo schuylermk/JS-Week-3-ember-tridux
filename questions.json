@@ -1,0 +1,14 @@
+{ "questions" : [{
+    "author": "Jim",
+    "subject": "apartment",
+    "content": "How much is it?"
+  }, {
+    "author": "Liina",
+    "subject": "apartment",
+    "content": "Where is it?"
+  }, {
+    "author": "Jordan",
+    "subject":"helping out",
+    "content": "What is in it for me?"
+  }]
+}

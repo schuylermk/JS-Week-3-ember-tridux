@@ -1,21 +1,21 @@
 import Ember from 'ember';
 
-  var questions = [{
-    author: "Jim",
-    content: "How much is it?",
-    notes: "per month"
-  }, {
-    author: "Liina",
-    content: "Where is it?",
-    notes: "What area"
-  }, {
-    author: "Jordan",
-    content: "What is in it for me?",
-    notes: "What do I get?"
-  }];
-
 export default Ember.Route.extend({
   model() {
-    return questions;
+    return this.store.findAll('question');
   },
+
+  actions: {
+    save3(params) {
+      var newQuestion = this.store.createRecord('question', params);
+      newQuestion.save();
+      this.transitionTo('index');
+    },
+
+    destroyQuestion(question) {
+      rental.destroyRecord();
+      this.transitionTo('index');
+    }
+  }
+
 });

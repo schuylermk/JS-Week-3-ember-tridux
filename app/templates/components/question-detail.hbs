@@ -1,0 +1,7 @@
+<strong>On the subject of {{question.subject}}, {{question.author}} wonders:</strong>
+<br>
+<br>
+"{{question.content}}"
+<br>
+{{update-question question=model update="update"}}
+<button {{action 'delete' question}}>Delete</button>
