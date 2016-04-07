@@ -1,14 +1,27 @@
-{ "questions" : [{
-    "author": "Jim",
-    "subject": "apartment",
-    "content": "How much is it?"
+{ "questions": [{
+  "author": "Jim",
+  "subject": "apartment",
+  "content": "How much is it?"
   }, {
     "author": "Liina",
     "subject": "apartment",
     "content": "Where is it?"
-  }, {
-    "author": "Jordan",
-    "subject":"helping out",
-    "content": "What is in it for me?"
-  }]
-}
+    }, {
+      "author": "Jordan",
+      "subject":"helping out",
+      "content": "What is in it for me?"
+      }],
+      "answers": [{
+        "responder": "jay",
+        "response": "hey",
+        "addition": "nmu"
+      }, {
+        "responder": "ray",
+        "response": "hwey",
+        "addition": "vmu"
+      }, {
+        "responder": "kay",
+        "response": "hbey",
+        "addition": "rmu" 
+      }
+}]

@@ -20,3 +20,4 @@ export default Ember.Component.extend({
     }
   }
 });
+console.log('hey');

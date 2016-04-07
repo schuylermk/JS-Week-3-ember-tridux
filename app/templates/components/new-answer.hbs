@@ -1,0 +1,22 @@
+{{#if addNewAnswer}}
+  <h1>Answer </h1>
+    <div>
+      <form>
+        <div class="form-group">
+          <label for="responder">Your Name</label>
+          {{input value=responder id="responder"}}
+        </div>
+        <div class="form-group">
+          <label for="response">Your Response</label>
+          {{input value=response id="response"}}
+        </div>
+        <div class="form-group">
+          <label for="addition">Explanation/Elaboration</label>
+          {{input value=addition id="addition"}}
+        </div>
+        <button {{action 'save1'}}>Save Answer</button>
+      </form>
+    </div>
+  {{else}}
+    <button {{action 'answerFormShow'}}>Supply Answer</button>
+{{/if}}
