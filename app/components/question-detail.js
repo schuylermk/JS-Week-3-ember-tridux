@@ -19,12 +19,11 @@ export default Ember.Component.extend({
         this.sendAction('destroyQuestion', question);
       }
     },
-    save3(params) {
-      console.log('GOTCHA');
-      var newAnswer = this.store.createRecord('response', params);
+    saveAnswer3(params) {
+      var newAnswer = this.store.createRecord('answers', params);
       newAnswer.save();
-      this.set('addNewAnswer', false)
+      this.set('addNewAnswer', false);
       this.transitionTo('index');
-    },
+    }
   }
 });
