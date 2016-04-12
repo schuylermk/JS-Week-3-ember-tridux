@@ -1,8 +1,9 @@
 <h2> {{model.author}}'s question involving  <em>{{model.subject}}</em>...</h2>
 
+{{question-detail question=model update="update" destroyQuestion="destroyQuestion" saveAnswer="saveAnswer"}}
 
-{{question-detail question=model destroyQuestion="destroyQuestion"}}
-{{new-answer saveAnswer2="saveAnswer3" question=model}}
+{{new-answer saveAnswer="saveAnswer" answer=model}}
+
 {{update-question question=model update="update"}}
 <hr>
-{{answer-board answer=model}}
+{{answer-board saveAnswer="saveAnswer" answer=model}}

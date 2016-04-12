@@ -19,7 +19,7 @@ export default Ember.Component.extend({
         this.sendAction('destroyQuestion', question);
       }
     },
-    saveAnswer3(params) {
+    saveAnswer(params) {
       var newAnswer = this.store.createRecord('answers', params);
       newAnswer.save();
       this.set('addNewAnswer', false);

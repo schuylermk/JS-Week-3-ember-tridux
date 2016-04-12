@@ -5,15 +5,7 @@ export default Ember.Route.extend({
     return this.store.findRecord('question', params.question_id);
   },
   actions: {
-    saveAnswer3(params) {
-      var newAnswer = this.store.createRecord('answer', params);
-      var question = params.question;
-      console.log(newAnswer);
-      question.get('answers').addObject(newAnswer);
-      newAnswer.save().then(function(){
-        return question.save();
-      });
-    },
+
     update(question, params) {
       Object.keys(params).forEach(function(key) {
         if(params[key]!==undefined) {
@@ -21,12 +13,20 @@ export default Ember.Route.extend({
         }
       });
       question.save();
-      this.transitionTo('index');
+      this.transitionTo('question ');
     },
-
     destroyQuestion(question) {
       question.destroyRecord();
       this.transitionTo('index');
+    },
+    saveAnswer(params) {
+      var newAnswer = this.store.createRecord('answer', params);
+      var question = params.question;
+      question.get('answers').addObject(newAnswer);
+      newAnswer.save().then(function(){
+        return question.save();
+      });
+      this.transitionTo('question', params.question);
     }
   }
 });
