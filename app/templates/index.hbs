@@ -4,11 +4,9 @@ You've got questions, we've got... a place for you to type them.
 <br>
 Maybe you'll get an answer!
 
-<ul>
-  {{#each model as |question|}}
-    {{question-tile question=question}}
-  {{/each}}
-</ul>
+{{#each model as |question|}}
+  {{question-tile question=question}}
+{{/each}}
 
 {{new-question saveQuestion="saveQuestion"}}
 

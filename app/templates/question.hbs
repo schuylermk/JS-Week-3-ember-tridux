@@ -2,8 +2,8 @@
 
 {{question-detail question=model update="update" destroyQuestion="destroyQuestion" saveAnswer="saveAnswer"}}
 
-{{new-answer saveAnswer="saveAnswer" answer=model}}
+{{new-answer saveAnswer="saveAnswer" question=model}}
 
 {{update-question question=model update="update"}}
 <hr>
-{{answer-board saveAnswer="saveAnswer" answer=model}}
+{{answer-board answers=model.answers destroyAnswer="destroyAnswer"}}

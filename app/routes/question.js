@@ -5,7 +5,6 @@ export default Ember.Route.extend({
     return this.store.findRecord('question', params.question_id);
   },
   actions: {
-
     update(question, params) {
       Object.keys(params).forEach(function(key) {
         if(params[key]!==undefined) {
@@ -13,7 +12,7 @@ export default Ember.Route.extend({
         }
       });
       question.save();
-      this.transitionTo('question ');
+      this.transitionTo('question');
     },
     destroyQuestion(question) {
       question.destroyRecord();
@@ -26,7 +25,11 @@ export default Ember.Route.extend({
       newAnswer.save().then(function(){
         return question.save();
       });
-      this.transitionTo('question', params.question);
-    }
+      this.transitionTo('answer');
+    },
+    destroyAnswer(answer) {
+      answer.destroyRecord();
+      this.transitionTo('question');
+    },
   }
 });

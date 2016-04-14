@@ -13,15 +13,12 @@
       }],
       "answers": [{
         "responder": "jay",
-        "response": "hey",
-        "addition": "nmu"
+        "response": "hey"
       }, {
         "responder": "ray",
-        "response": "hwey",
-        "addition": "vmu"
+        "response": "hwey"
       }, {
         "responder": "kay",
-        "response": "hbey",
-        "addition": "rmu" 
+        "response": "hbey"
       }
 }]

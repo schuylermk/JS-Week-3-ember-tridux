@@ -10,12 +10,15 @@ export default Ember.Component.extend({
       var params = {
         responder: this.get('responder'),
         response: this.get('response'),
-        addition: this.get('addition'),
         question: this.get('question')
       };
-      console.log(params.question);
       this.set('addNewAnswer', false);
       this.sendAction('saveAnswer', params);
-    }
+    },
+    delete(answer) {
+      if (confirm('Are you sure you want to delete this answer?')) {
+        this.sendAction('destroyAnswer', answer);
+      }
+    },
   }
 });

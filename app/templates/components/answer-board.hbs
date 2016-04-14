@@ -1,3 +1,7 @@
-
-  <h4>{{answer.responder}} has weighed in and responded, </h4>
-  <p>"{{answer.response}}"</p>
+{{#each answers as |answer|}}
+  <div>
+    <h3>{{answer.responder}}</h3>
+    <p>{{answer.response}}</p>
+    <button {{action 'delete' answer}}>Delete</button>
+  </div>
+{{/each}}
